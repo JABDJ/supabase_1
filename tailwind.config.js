@@ -1,15 +1,18 @@
-// tailwind.config.js
+// tailwind.config.cjs
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Rutas de tus archivos
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")], // Añade daisyui
+  plugins: [require("daisyui")],
+  // ===> AÑADE O MODIFICA ESTA PARTE <===
   daisyui: {
-    themes: ["dark"], // Configura el tema
+    themes: ["dark"], // Aquí especificamos el tema oscuro
+    // Si quieres tener un tema claro y oscuro, puedes poner:
+    // themes: ["light", "dark"],
   },
-}
+};
